@@ -1,0 +1,48 @@
+{
+  "title": "Left Window Right Window",
+  "rules": [
+    {
+      "description": "Left Window Right Window Configuration",
+      "manipulators": [
+        {
+          "description": "Left Window -> F17",
+          "type": "basic",
+          "from": {
+            "key_code": "left_arrow",
+            "modifiers": {
+              "mandatory": [
+                "left_control",
+                "left_command",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f17"
+            }
+          ]
+        },
+        {
+          "description": "Right Window -> F18",
+          "type": "basic",
+          "from": {
+            "key_code": "right_arrow",
+            "modifiers": {
+              "mandatory": [
+                "left_control",
+                "left_command",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f18"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
