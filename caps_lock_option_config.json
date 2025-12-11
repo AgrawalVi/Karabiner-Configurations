@@ -1,0 +1,47 @@
+{
+  "title": "Caps Lock and Option Hyper Key Configuration",
+  "rules": [
+    {
+      "description": "Caps lock and Option Hyper Key Configuration",
+      "manipulators": [
+        {
+          "description": "Caps Lock → Right Option",
+          "type": "basic",
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [
+            {
+              "key_code": "right_option"
+            }
+          ]
+        },
+        {
+          "description": "Left option -> Hyper Key (⌃⌥⌘) and caps lock if pressed alone",
+          "type": "basic",
+          "from": {
+            "key_code": "left_option",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [
+            {
+              "key_code": "left_option",
+              "modifiers": [
+                "left_command",
+                "left_control"
+              ]
+            }
+          ],
+          "to_if_alone": [
+            { 
+              "key_code": "caps_lock", 
+              "hold_down_milliseconds": 200 
+            },
+            { "key_code": "vk_none" }
+          ]
+        }
+      ]
+    }
+  ]
+}
