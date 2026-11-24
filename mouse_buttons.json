@@ -1,0 +1,50 @@
+{
+  "title": "Mouse Buttons Configuration",
+  "rules": [
+    {
+      "description": "Right Command + Left/Right Arrow -> Mouse Button 4 / 5",
+      "manipulators": [
+        {
+          "description": "Right Command + Left Arrow -> Mouse Button 4",
+          "type": "basic",
+          "from": {
+            "key_code": "left_arrow",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "pointing_button": "button4"
+            }
+          ]
+        },
+        {
+          "description": "Right Command + Right Arrow -> Mouse Button 5",
+          "type": "basic",
+          "from": {
+            "key_code": "right_arrow",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "pointing_button": "button5"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
